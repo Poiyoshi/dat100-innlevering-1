@@ -7,10 +7,15 @@ public class O3 {
 
 	public static void main(String[] args) {
 		String a = showInputDialog("Skriv inn et heltall større enn null: ");
-		int x = parseInt (a);
+		int x = parseInt(a);
 		int t = 1;
-		for(int i = 1; i <= x; i++) {
-				t = i * t;
-		} System.out.println(x + "! = " + t);
-}
+		while (x < 0) {
+			String u = showInputDialog("Ugyldig tall, skriv på nytt: ");
+			x = parseInt(u);
+		}
+		for (int i = 1; i <= x; i++) {
+			t = i * t;
+		}
+		System.out.println(x + "! = " + t);
+	}
 }
