@@ -12,7 +12,7 @@ public class O1 {
 		if (inntekt <= 208050) {
 			System.out.println("Du betaler ikke trinnskatt.");
 		} else if (inntekt > 208050 && inntekt <= 292850) {
-			double skatt = inntekt * 0.017;
+			double skatt = (inntekt-208050) * 0.017;
 			System.out.println("Du betaler " + skatt + " i skatt med en inntekt på " + inntekt);
 		} else if (inntekt > 292850 && inntekt <= 670000) {
 			double skatt = ((292850 - 208050) * 0.017) + ((inntekt - 292850) * 0.04);
